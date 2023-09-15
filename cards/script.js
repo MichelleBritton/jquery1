@@ -34,6 +34,7 @@ $(document).ready(function() {
         $(".stream1").addClass('highlight_stream');
     });
 
+    // jQuery Animation
     $("#stream1_btn").on(function() {
         $(".stream1").fadeTo(1000, 0.5);
 
@@ -70,4 +71,19 @@ $(document).ready(function() {
         $(".stream1").show('fast');
         $(".stream1").show(1000);
     });
+
+    // Method chaining
+    $("#myButton").removeClass("blueBox");
+    $("#myButton").addClass("border");
+
+    // Using method chaning this would become:
+    $("#myButton").removeClass("blueBox").addClass("border");
+
+    // You can also do this with events
+    $("p").css("color", "blue").slideUp(2000).slideDown(20000);
+
+    // An element's attributes can contain useful information so it's important to be able to access and manipulate them
+    // The attr() function act both as a getter and a setter, here we can with one parameter, here we are looking for an href
+    // and update the attribute for the second parameter, in this case example.com
+    $("a").attr("href", "http://www.example.com");
 }); 
